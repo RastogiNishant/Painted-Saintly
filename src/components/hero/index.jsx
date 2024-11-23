@@ -2,17 +2,17 @@ import HeroImage from "../../assets/hero_one.png";
 
 const HeroSection = () => {
 	return (
-		<section className='w-full flex items-center justify-center min-h-screen'>
+		<section className='w-full pt-[30px] md:pt-0'>
 			<div className='w-full flex flex-col md:flex-row md:items-center md:space-x-16'>
-				<div className='w-full md:w-1/2 flex justify-center md:justify-start order-2 md:order-1 mb-8 lg:mb-0'>
+				<div className='w-full md:w-2/5 flex justify-center md:justify-start order-2 md:order-1 lg:mb-0'>
 					<img
 						src={HeroImage}
 						alt='Hero Image'
-						className='w-full sm:max-w-[600px]'
+						className='w-full md:max-w-[600px]'
 					/>
 				</div>
 
-				<div className='w-full md:w-1/2 text-center md:text-left flex flex-col items-center md:items-start md:pl-16 order-1 md:order-2'>
+				<div className='w-full md:w-3/5 text-center md:text-left flex flex-col items-center md:items-start order-1 mb-[43px] md:mb-0 md:order-2 md:mr-5 md:max-w-[600px]'>
 					<h1 className='text-[45px] font-bold leading-[60px] capitalize mb-6'>
 						Transform Your Photos Into Medieval Art
 					</h1>
@@ -23,7 +23,7 @@ const HeroSection = () => {
 					</p>
 					<a
 						href='#'
-						className='px-8 py-3 bg-orange-500 text-white text-lg rounded-full shadow-md hover:bg-orange-600 transition duration-300'
+						className='px-8 py-3 bg-[#FD6944] text-black text-lg rounded-full shadow-md hover:bg-[#F6E596] hover:underline transition duration-300'
 					>
 						Create Your Portraits
 					</a>

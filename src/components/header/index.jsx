@@ -1,7 +1,10 @@
 import { useState } from "react";
-import Logo from "../../assets/combined_logo.png";
+import { useNavigate } from "react-router-dom";
+import Logo from "../../assets/logo.png";
+import LogoText from "../../assets/logotext.png";
 
 const Header = () => {
+	const navigate = useNavigate();
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -9,10 +12,14 @@ const Header = () => {
 	const closeMenu = () => setIsMenuOpen(false);
 
 	return (
-		<header className='fixed top-0 left-0 w-full bg-white z-50 border-b border-black px-[25px] py-[35px] md:px-[90px]'>
+		<header
+			className='fixed top-0 left-0 w-full bg-white z-50 border-b border-black px-[25px] py-[35px] md:px-[90px] cursor-pointer'
+			onClick={() => navigate("/")}
+		>
 			<div className='max-w-7xl mx-auto flex justify-between items-center'>
 				<div className='flex items-center space-x-2'>
 					<img src={Logo} alt='Logo' className='h-10' />
+					<img src={LogoText} alt='Logo' className='h-10' />
 				</div>
 
 				<nav className='hidden lg:flex space-x-8'>

@@ -7,7 +7,12 @@ const App = () => {
 			<Header />
 			<div className='mx-auto my-[110px]'>
 				<HeroSection />
-
+				<section className='w-full bg-yellow px-[30px] py-[52px] text-center border-b border-t border-black'>
+					<p>
+						Over 10,000 unique portraits crafted for 1,000+ happy
+						customers
+					</p>
+				</section>
 				{/* Featured Image */}
 				<div className='mt-6'>
 					<div className='w-full h-48 bg-gray-300 rounded-lg flex items-center justify-center'>
