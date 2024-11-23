@@ -1,15 +1,15 @@
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import Logo from "../../assets/logo.png";
-import LogoText from "../../assets/logotext.png";
+import Logo from "@assets/logo.png";
+import LogoText from "@assets/logotext.png";
 
 const Header = () => {
+	const menuRef = useRef(null);
 	const navigate = useNavigate();
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
-	const menuRef = useRef(null);
 
-	const toggleMenu = () => setIsMenuOpen((prev) => !prev);
 	const closeMenu = () => setIsMenuOpen(false);
+	const toggleMenu = () => setIsMenuOpen((prev) => !prev);
 
 	useEffect(() => {
 		const handleClickOutside = (event) => {

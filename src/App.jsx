@@ -1,5 +1,6 @@
-import Header from "./components/header";
-import HeroSection from "./components/hero";
+import Header from "@components/header";
+import HeroSection from "@components/hero";
+import WhyUs from "@components/why-us";
 
 const App = () => {
 	return (
@@ -13,7 +14,7 @@ const App = () => {
 						customers
 					</p>
 				</section>
-				{/* Featured Image */}
+				<WhyUs />
 				<div className='mt-6'>
 					<div className='w-full h-48 bg-gray-300 rounded-lg flex items-center justify-center'>
 						<p className='text-gray-500'>Image Placeholder</p>

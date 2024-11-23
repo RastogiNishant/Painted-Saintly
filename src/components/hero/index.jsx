@@ -1,4 +1,4 @@
-import HeroImage from "../../assets/hero_one.png";
+import HeroImage from "@assets/hero_one.png";
 
 const HeroSection = () => {
 	return (
@@ -24,12 +24,12 @@ const HeroSection = () => {
 						receive 50 fabulous, crafted portraits that turn your
 						face into a dazzling medieval masterpiece.
 					</p>
-					<a
-						href='#'
-						className='px-8 py-3 bg-[#FD6944] text-black text-lg rounded-full shadow-md hover:bg-[#F6E596] transition duration-300'
+					<button
+						role='button'
+						className='px-8 py-3 bg-[#FD6944] text-black text-lg rounded-full shadow-md hover:bg-[#F6E596] transition duration-300 border border-black'
 					>
 						Create Your Portraits
-					</a>
+					</button>
 				</div>
 			</div>
 		</section>
