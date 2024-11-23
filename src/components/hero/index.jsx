@@ -12,7 +12,10 @@ const HeroSection = () => {
 					/>
 				</div>
 
-				<div className='w-full md:w-3/5 text-center md:text-left flex flex-col items-center md:items-start order-1 mb-[43px] md:mb-0 md:order-2 md:mr-5 md:max-w-[600px]'>
+				<div
+					className='w-full md:w-3/5 text-center md:text-left flex flex-col items-center md:items-start order-1 mb-[43px] md:mb-0 md:order-2 md:mr-5
+					md:max-w-[600px] md:px-0 px-[25px]'
+				>
 					<h1 className='text-[45px] font-bold leading-[60px] capitalize mb-6'>
 						Transform Your Photos Into Medieval Art
 					</h1>
@@ -23,7 +26,7 @@ const HeroSection = () => {
 					</p>
 					<a
 						href='#'
-						className='px-8 py-3 bg-[#FD6944] text-black text-lg rounded-full shadow-md hover:bg-[#F6E596] hover:underline transition duration-300'
+						className='px-8 py-3 bg-[#FD6944] text-black text-lg rounded-full shadow-md hover:bg-[#F6E596] transition duration-300'
 					>
 						Create Your Portraits
 					</a>
