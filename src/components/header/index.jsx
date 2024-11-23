@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import Logo from "../../assets/logo.png";
 import LogoText from "../../assets/logotext.png";
@@ -6,10 +6,25 @@ import LogoText from "../../assets/logotext.png";
 const Header = () => {
 	const navigate = useNavigate();
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const menuRef = useRef(null);
 
-	const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-
+	const toggleMenu = () => setIsMenuOpen((prev) => !prev);
 	const closeMenu = () => setIsMenuOpen(false);
+
+	useEffect(() => {
+		const handleClickOutside = (event) => {
+			if (menuRef.current && !menuRef.current.contains(event.target)) {
+				closeMenu();
+			}
+		};
+		document.addEventListener("mousedown", handleClickOutside);
+		document.addEventListener("touchstart", handleClickOutside);
+
+		return () => {
+			document.removeEventListener("mousedown", handleClickOutside);
+			document.removeEventListener("touchstart", handleClickOutside);
+		};
+	}, []);
 
 	return (
 		<header
@@ -89,8 +104,8 @@ const Header = () => {
 
 			{isMenuOpen && (
 				<div
+					ref={menuRef}
 					className='absolute top-16 right-2 w-64 bg-gray shadow-lg rounded-md transition transform origin-top-right'
-					onMouseLeave={closeMenu}
 				>
 					<nav className='flex flex-col items-center px-[30px] py-[50px]'>
 						<a
